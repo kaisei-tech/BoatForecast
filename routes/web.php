@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('top');
 });
 Route::get('hello',function () {
     return '<html><body><h1>Hello</h1><p>This is sample page.
@@ -23,3 +25,5 @@ Route::get('hello',function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/index', [App\Http\Controllers\ForecastController::class, 'index']);
