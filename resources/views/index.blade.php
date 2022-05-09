@@ -1,16 +1,16 @@
 @extends('layouts.list')
 
 @section('content')
-<h1>予想一覧</h1>
 
-<table class="table table-striped">
+<h1><span class="fw-bold">【予想一覧】</span><br></h1>
+
+<table class="table  table-striped  table-bordered table-hover ">
   <thead>
-    <tr>
+    <tr class="text-center">
       <th>ID</th>
       <th>日付</th>
       <th>会場名</th>
-      <th>R</th
-      
+      <th>R</th>      
     </tr>
   </thead>
   <tbody>
@@ -20,11 +20,11 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="" class="btn btn-primary">編集</a></td>
+      <td><a href="" class="btn-outline-secondary btn-lg">編集</a></td>
     </tr>
     {{-- @endforeach --}}
   </tbody>
 </table>
 
-<a href="">Ｍｙ予想ページ作成へ</a>
+<a href=""><strong>Ｍｙ予想ページ作成へ</strong></a>
 @endsection
