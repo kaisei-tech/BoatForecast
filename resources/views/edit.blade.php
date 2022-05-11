@@ -6,11 +6,11 @@
     {{-- ヘッダー部分 --}}
     <div class="header">
         <div class="logo h1">
-            <span class="logo-text fw-bold">【Ｍｙ予想】</span>
+            <span class="logo-text fw-bold">【Ｍｙ予想編集モード】</span>
         </div>
         <div class="header-btn">
-            <button class="btn fw-bold">予想一覧へ</button>       
-            <button class="btn fw-bold" >予想を作成する</button>
+            <button class="btn fw-bold">編集を完了する</button>       
+            <button class="btn fw-bold" >予想を削除する</button>
         </div>
     </div>
     {{-- ここからメイン部分 --}}
@@ -196,7 +196,7 @@
             </div>    
         </div>
     </div>
-</div>     
+</div>    
 </body>
 
 

@@ -11286,3 +11286,62 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 20px;
+  vertical-align: center;
+}
+
+.logo-text {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header-btn {
+  padding: 20px;
+  vertical-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0px 0px 0px;
+}
+
+.entry-title {
+  margin-left: 10px;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.entry-cource {
+  font-size: 17px;
+}
+
+#entry-boat {
+  width: 30px;
+}
+
+.race {
+  display: flex;
+  justify-content: left;
+  padding: 5px 10px;
+  margin: 40px 0px 40px 0px;
+}
+
+#race-name {
+  width: 300px;
+}
+
+#race-round {
+  width: 40px;
+}
