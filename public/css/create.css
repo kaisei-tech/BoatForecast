@@ -11395,3 +11395,15 @@ span {
   padding-top: 37px;
   margin-left: 180px;
 }
+
+.create-btn {
+  font-size: 20px;
+  margin-left: 250px;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  font-size: 20px;
+  margin-left: 250px;
+  margin-top: 10px;
+}

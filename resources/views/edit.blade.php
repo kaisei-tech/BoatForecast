@@ -9,8 +9,7 @@
             <span class="logo-text fw-bold">【Ｍｙ予想編集モード】</span>
         </div>
         <div class="header-btn">
-            <button class="btn fw-bold">編集を完了する</button>       
-            <button class="btn fw-bold" >予想を削除する</button>
+            <button class="btn btn-success  fw-bold">編集を完了する</button>                   
         </div>
     </div>
     {{-- ここからメイン部分 --}}
@@ -25,7 +24,7 @@
                     <div class="pattern fw-bold">
                         <div class="pattern-item">
                             <div class="pattern-item-head border-bottom">
-                                <span claas="pattern-item-head-name">パターン1</span><button class="btn btn-outline-warning">追加</button>
+                                <span claas="pattern-item-head-name">パターン1</span><button class="btn btn-warning fw-bold text-light">追加</button>
                             </div>    
                             <div class="pattern-item-input">
                                 <div class="rank">1着</div>
@@ -96,7 +95,7 @@
                             
                             </div>
                             <div class="pattern-item-head border-bottom">
-                                <span claas="pattern-item-head-name">パターン2</span><button class="btn btn-outline-warning">追加</button>
+                                <span claas="pattern-item-head-name">パターン2</span><button class="btn btn-warning fw-bold text-light">追加</button>
                             </div>
                             <div class="pattern-item-input">
                                 <div class="rank">1着</div>
@@ -187,7 +186,7 @@
                     <div class="comment">
                         <div class="comment-logo h2  fw-bold">コメント</div>
                         <textarea name="introduction" id="introduction" cols="67" rows="22"placeholder="予想コメントを書いてください" class="form-control"></textarea>
-                        <p class="help-block">※1100文字以内で書いてください</p>
+                        <p class="help-block">※1100文字以内で書いてください<button class="btn fw-bold btn-success create-btn" >予想を削除する</button></p>
                     </div>    
                 </div>
             </div>
