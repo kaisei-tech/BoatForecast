@@ -34,7 +34,7 @@
                 </div>
                 <div class="race">
                     <input id="race-name" type="text" placeholder="会場名" />
-                    <input id="race-round" type="text" placeholder="R" />
+                    <input id="race-round" type="text" placeholder="R" /><span fw-bold>R</span>
                 </div>
                 <div class="forecast form-floating">
                     <textarea class="form-control" style="height: 240px"></textarea>
