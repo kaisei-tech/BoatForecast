@@ -11314,14 +11314,14 @@ body {
 .main {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0px 0px 0px;
+  margin: 80px 0px 0px 130px;
 }
 
 .race {
   display: flex;
   justify-content: center;
   padding: 5px 10px;
-  margin: 0px 0px 80px 0px;
+  margin: 0px 0px 60px 40px;
   font-size: 15px;
 }
 
@@ -11339,7 +11339,7 @@ span {
 
 .pattern-item-head {
   font-size: 30px;
-  margin: 20px 20px 20px 50px;
+  margin: 20px 20px 25px 50px;
 }
 .pattern-item-head span {
   padding: 10px 10px;
@@ -11371,20 +11371,27 @@ span {
   margin: 0px 5px;
 }
 
+.entry-title {
+  margin-left: 130px;
+}
+
 .entry {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  margin-left: 120px;
 }
 
 .entry-cource {
-  font-size: 18px;
+  font-size: 15px;
+  margin-left: 10px;
 }
 
 #entry-boat {
-  width: 30px;
+  width: 15px;
 }
 
 .comment {
   padding-top: 37px;
+  margin-left: 180px;
 }
