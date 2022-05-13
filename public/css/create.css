@@ -11342,8 +11342,12 @@ body {
 
 .pattern-item-input {
   display: flex;
-  justify-content: space-between;
   margin-top: 20px;
+  justify-content: space-between;
+}
+
+.pattern-btn-group {
+  margin: 0px 60px 0px 0px;
 }
 
 .rank {
