@@ -1,9 +1,9 @@
 
 # BoatForecast
  
-
+BoatForecast is the application that can make a boat race forecast page of the own.
  
-"BoatForecast"が何かを簡潔に紹介する
+
  
 # DEMO
  
@@ -40,19 +40,18 @@ python demo.py
  
 # Note
  
-注意点などがあれば書く
+I don't test environments under Mac.
+ 
  
 # Author
  
-作成情報を列挙する
- 
 * Hara Kaisei
-* E-mail
+* ecohumankaisei@gmail.com
+ 
  
 # License
-ライセンスを明示する
+
  
 "BoatForecast" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
  
-社内向けなら社外秘であることを明示してる
- 
+
