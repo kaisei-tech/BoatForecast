@@ -11,7 +11,8 @@ BoatForecast is the application that can make a boat race forecast page of the o
  
 # Features
  
-"BoatForecast"のセールスポイントや差別化などを説明する
+BoatForecast  specialized in trifecta forecast.
+Users of this app can create high quality forecast pages with simple input operations.
  
 # Requirement
  
@@ -52,6 +53,6 @@ I don't test environments under Mac.
 # License
 
  
-"BoatForecast" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+BoatForecast is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
  
 
