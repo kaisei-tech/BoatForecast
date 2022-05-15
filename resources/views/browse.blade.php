@@ -9,8 +9,8 @@
             <span class="logo-text fw-bold">【Ｍｙ予想 view】</span>
         </div>
         <div class="header-btn">
-            <button class="btn btn-success  fw-bold">予想一覧へ</button>       
-            <button class="btn btn-success  fw-bold" >Ｍｙ予想へ</button>
+            <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='http://localhost:8000/index'">予想一覧へ</button>     
+            <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='http://localhost:8000/create'">Ｍｙ予想へ</button>
         </div>
     </div>
     {{-- ここからメイン部分 --}}
