@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\User;
+use App\Models\Forecast;
+use App\Models\Pattern;
+use App\Models\Course;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +33,6 @@ Route::get('/index', [App\Http\Controllers\ForecastController::class, 'index']);
 Route::get('/create', [App\Http\Controllers\ForecastController::class, 'create']);
 Route::get('/edit', [App\Http\Controllers\ForecastController::class, 'edit']);
 Route::get('/browse', [App\Http\Controllers\ForecastController::class, 'browse']);
+
+
+
