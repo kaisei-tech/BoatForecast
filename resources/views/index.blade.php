@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="header">
-  <div class="logo h1">
-      <span class="logo-text fw-bold ">【予想一覧】</span>
+  <div class="logo">
+      <span class="h1 logo-text fw-bold ">【予想一覧】</span>
   </div>
   <div class="header-btn">
       <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='/create'">Ｍｙ予想へ</button>
