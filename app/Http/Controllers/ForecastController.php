@@ -12,4 +12,8 @@ class ForecastController extends Controller
 
         return view('index');
     }
+
+    public function create() {
+        return view('create');
+    }
 }
