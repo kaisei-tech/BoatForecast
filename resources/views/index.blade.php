@@ -20,11 +20,11 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="" class="btn-outline-secondary btn-lg">編集</a></td>
+      <td><a href="" class=" btn-lg">編集</a></td>
     </tr>
     {{-- @endforeach --}}
   </tbody>
 </table>
 
-<a href=""><strong>Ｍｙ予想ページ作成へ</strong></a>
+<a href=""><strong>Ｍｙ予想ページへ</strong></a>
 @endsection

@@ -20,15 +20,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/browse.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div style="background-image: url('img/place.png'); background-size: cover;">    
-        <div id="app">
-            <main class="py-4">
-                @yield('content')
-            </main>
-        </div>
-    </div>
-</body>
+@yield('content')
 </html>
