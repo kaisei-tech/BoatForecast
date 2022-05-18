@@ -8,7 +8,7 @@
   </div>
   <div class="header-btn">
       <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='http://localhost:8000/create'">Ｍｙ予想へ</button>
-      <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='http://localhost:8000/logout'">ログアウト画面へ</button>
+      <button type=“button” class="btn btn-success  fw-bold "  href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</button><form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
   </div>
 </div>
 
