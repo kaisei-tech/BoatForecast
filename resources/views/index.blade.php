@@ -3,12 +3,12 @@
 @section('content')
 
 <div class="header">
-  <div class="logo h1">
-      <span class="logo-text fw-bold ">【予想一覧】</span>
+  <div class="logo">
+      <span class="h1 logo-text fw-bold ">【予想一覧】</span>
   </div>
   <div class="header-btn">
-      <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='http://localhost:8000/create'">Ｍｙ予想へ</button>
-      <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='http://localhost:8000/logout'">ログアウト画面へ</button>
+      <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='/create'">Ｍｙ予想へ</button>
+      <button type=“button” class="btn btn-success  fw-bold "  href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</button><form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
   </div>
 </div>
 
@@ -28,7 +28,7 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button type=“button” class="btn btn-success  fw-bold " onclick="location.href='http://localhost:8000/edit'">編集</button></td>
+      <td><button type=“button” class="btn btn-success  fw-bold " onclick="location.href='/edit'">編集</button></td>
     </tr>
     {{-- @endforeach --}}
   </tbody>
