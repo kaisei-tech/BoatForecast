@@ -2,10 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
-use App\Models\Forecast;
-use App\Models\Pattern;
-use App\Models\Course;
+
 
 /*
 |--------------------------------------------------------------------------
