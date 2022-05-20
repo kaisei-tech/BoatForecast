@@ -30,3 +30,6 @@ Route::get('/index', [App\Http\Controllers\ForecastController::class, 'index']);
 Route::get('/create', [App\Http\Controllers\ForecastController::class, 'create']);
 Route::get('/edit', [App\Http\Controllers\ForecastController::class, 'edit']);
 Route::get('/browse', [App\Http\Controllers\ForecastController::class, 'browse']);
+
+
+
