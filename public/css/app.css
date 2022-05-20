@@ -11286,3 +11286,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 20px;
+  vertical-align: center;
+}
+
+.logo-text {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header-btn {
+  padding: 20px;
+  vertical-align: center;
+}

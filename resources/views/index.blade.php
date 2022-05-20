@@ -2,7 +2,15 @@
 
 @section('content')
 
-<h1><span class="fw-bold">【予想一覧】</span><br></h1>
+<div class="header">
+  <div class="logo">
+      <span class="h1 logo-text fw-bold ">【予想一覧】</span>
+  </div>
+  <div class="header-btn">
+      <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='/create'">Ｍｙ予想へ</button>
+      <button type=“button” class="btn btn-success  fw-bold "  href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</button><form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
+  </div>
+</div>
 
 <table class="table  table-striped  table-bordered table-hover ">
   <thead>
@@ -20,11 +28,12 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="" class=" btn-lg">編集</a></td>
+      <td><button type=“button” class="btn btn-success  fw-bold " onclick="location.href='/edit'">編集</button></td>
     </tr>
     {{-- @endforeach --}}
   </tbody>
 </table>
 
-<a href=""><strong>Ｍｙ予想ページへ</strong></a>
+
+
 @endsection

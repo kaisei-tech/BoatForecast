@@ -24,7 +24,7 @@ Route::get('hello',function () {
 });
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/logout', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::get('/index', [App\Http\Controllers\ForecastController::class, 'index']);
 Route::get('/create', [App\Http\Controllers\ForecastController::class, 'create']);
