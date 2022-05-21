@@ -4,7 +4,7 @@
 
 <div class="header">
   <div class="logo">
-      <span class="h1 logo-text fw-bold ">【予想一覧】</span>
+      <h1 class="h1 logo-text fw-bold ">【予想一覧】</h1>
   </div>
   <div class="header-btn">
       <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='/create'">Ｍｙ予想へ</button>
