@@ -26,11 +26,14 @@ Auth::routes();
 
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'index']);
 
-Route::get('/index', [App\Http\Controllers\ForecastController::class, 'index']);
-Route::get('/create', [App\Http\Controllers\ForecastController::class, 'create']);
-Route::get('/edit', [App\Http\Controllers\ForecastController::class, 'edit']);
-Route::get('/browse', [App\Http\Controllers\ForecastController::class, 'browse']);
-Route::post('/browse', [App\Http\Controllers\ForecastController::class, 'store']);
+Route::get('/index', [App\Http\Controllers\ForecastController::class, 'index'])->name('index');
+Route::post('/delete/{id}/', [App\Http\Controllers\ForecastController::class, 'delete'])->name('delete');
+Route::get('/create', [App\Http\Controllers\ForecastController::class, 'create'])->name('create');
+Route::get('/edit/{id}', [App\Http\Controllers\ForecastController::class, 'edit'])->name('edit');
+Route::get('/browse', [App\Http\Controllers\ForecastController::class, 'browse'])->name('browse');
+Route::post('/browse', [App\Http\Controllers\ForecastController::class, 'store'])->name('browse.store');
+Route::get('/browse_update', [App\Http\Controllers\ForecastController::class, 'browse_update'])->name('browse_update');
+Route::post('/browse_update', [App\Http\Controllers\ForecastController::class, 'update'])->name('browse_update.update');
 
 
 

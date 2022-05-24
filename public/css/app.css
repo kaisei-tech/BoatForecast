@@ -11305,3 +11305,8 @@ textarea.form-control-lg {
   padding: 20px;
   vertical-align: center;
 }
+
+.edit-btn {
+  float: right;
+  border: none;
+}
