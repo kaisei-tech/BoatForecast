@@ -106,7 +106,9 @@ span {
 
 .forecast-pattern {
     font-size: 25px;
-    padding: 15px 15px 15px 15px;
+    line-height:4.0em;
+    padding: 15px 15px 5px 15px;
+    margin-top: 15px;
     margin-bottom: 12px;
     margin-left: 5px;
 }
@@ -116,7 +118,7 @@ span {
 
 //　main右
 .right {
-    margin-top: 25px;
+    margin-top: 20px;
     padding-right: 20px;
     padding-left: 40px;
 

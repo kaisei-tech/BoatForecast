@@ -27,27 +27,27 @@
                         <div class="pattern fw-bold">
                             <div class="pattern-item">
                                 <div class="pattern-item-head border-bottom">
-                                    <span claas="pattern-item-head-name">パターン1</span><input type="checkbox" name="pattern_num[]"  class="input-pattern" value="1">
+                                    <span claas="pattern-item-head-name">パターン1</span><input type="checkbox" name="pattern_num[0]"  class="input-pattern" value="1" {{(count($array_patterns1[0]) == 0)&&(count($array_patterns1[1]) == 0)&&(count($array_patterns1[2]) == 0) ? '' : 'checked'}} >
                                 </div>    
                                 <div class="pattern-item-input">
                                     <div class="rank">1着</div>
                                     <div class="btn-group pattern-btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                        <input type="checkbox" name="first[]" class="btn-check"  id="btncheck1"value="1" autocomplete="off">
+                                        <input type="checkbox" name="first[]" class="btn-check"  id="btncheck1"value="1" autocomplete="off" {{in_array("1",$array_patterns1[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-light" for="btncheck1">1</label>
                                         
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck2" value="2" autocomplete="off">
+                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck2" value="2" autocomplete="off" {{in_array("2",$array_patterns1[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-dark" for="btncheck2">2</label>
                                         
-                                        <input type="checkbox" name="first[]"class="btn-check" id="btncheck3" value="3" autocomplete="off">
+                                        <input type="checkbox" name="first[]"class="btn-check" id="btncheck3" value="3" autocomplete="off" {{in_array("3",$array_patterns1[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-danger" for="btncheck3">3</label>
     
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck4" value="4" autocomplete="off">
+                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck4" value="4" autocomplete="off" {{in_array("4",$array_patterns1[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-primary" for="btncheck4">4</label>
     
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck5" value="5" autocomplete="off">
+                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck5" value="5" autocomplete="off" {{in_array("5",$array_patterns1[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-warning" for="btncheck5">5</label>
     
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck6" value="6" autocomplete="off">
+                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck6" value="6" autocomplete="off" {{in_array("6",$array_patterns1[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-success" for="btncheck6">6</label>
                                     </div>
                                     
@@ -55,114 +55,114 @@
                                 <div class="pattern-item-input">
                                     <div class="rank">2着</div>
                                     <div class="btn-group pattern-btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck7" value="1" autocomplete="off">
+                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck7" value="1" autocomplete="off" {{in_array("1",$array_patterns1[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-light" for="btncheck7">1</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck8" value="2" autocomplete="off">
+                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck8" value="2" autocomplete="off" {{in_array("2",$array_patterns1[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-dark" for="btncheck8">2</label>
                                         
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck9" value="3" autocomplete="off">
+                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck9" value="3" autocomplete="off" {{in_array("3",$array_patterns1[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-danger" for="btncheck9">3</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck10" value="4" autocomplete="off">
+                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck10" value="4" autocomplete="off" {{in_array("4",$array_patterns1[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-primary" for="btncheck10">4</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck11" value="5" autocomplete="off">
+                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck11" value="5" autocomplete="off" {{in_array("5",$array_patterns1[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-warning" for="btncheck11">5</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck12" value="6" autocomplete="off">
+                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck12" value="6" autocomplete="off" {{in_array("6",$array_patterns1[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-success" for="btncheck12">6</label>
                                     </div>
                                 </div>
                                 <div class="pattern-item-input">
                                     <div class="rank">3着</div>
                                     <div class="btn-group pattern-btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck13" value="1" autocomplete="off">
+                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck13" value="1" autocomplete="off" {{in_array("1",$array_patterns1[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-light" for="btncheck13">1</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck14" value="2" autocomplete="off">
+                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck14" value="2" autocomplete="off" {{in_array("2",$array_patterns1[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-dark" for="btncheck14">2</label>
                                         
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck15" value="3" autocomplete="off">
+                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck15" value="3" autocomplete="off" {{in_array("3",$array_patterns1[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-danger" for="btncheck15">3</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck16" value="4" autocomplete="off">
+                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck16" value="4" autocomplete="off" {{in_array("4",$array_patterns1[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-primary" for="btncheck16">4</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck17" value="5" autocomplete="off">
+                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck17" value="5" autocomplete="off" {{in_array("5",$array_patterns1[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-warning" for="btncheck17">5</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck18" value="6" autocomplete="off">
+                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck18" value="6" autocomplete="off" {{in_array("6",$array_patterns1[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-success" for="btncheck18">6</label>
                                     </div>
                                 
                                 </div>
                                 <div class="pattern-item-head border-bottom">
-                                    <span claas="pattern-item-head-name">パターン2</span><input type="checkbox" name="pattern_num[]"class="input-pattern" value="2">
+                                    <span claas="pattern-item-head-name">パターン2</span><input type="checkbox" name="pattern_num[1]"class="input-pattern" value="2"{{(count($array_patterns2[0]) == 0)&&(count($array_patterns2[1]) == 0)&&(count($array_patterns2[2]) == 0) ? '' : 'checked'}} >
                                 </div>
                                 <div class="pattern-item-input">
                                     <div class="rank">1着</div>
                                     <div class="btn-group pattern-btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck19" value="1" autocomplete="off">
+                                        <input type="checkbox" name="first2[]" class="btn-check" id="btncheck19" value="1" autocomplete="off" {{in_array("1",$array_patterns2[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-light" for="btncheck19">1</label>
     
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck20" value="2" autocomplete="off">
+                                        <input type="checkbox" name="first2[]" class="btn-check" id="btncheck20" value="2" autocomplete="off" {{in_array("2",$array_patterns2[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-dark" for="btncheck20">2</label>
                                         
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck21" value="3" autocomplete="off">
+                                        <input type="checkbox" name="first2[]" class="btn-check" id="btncheck21" value="3" autocomplete="off" {{in_array("3",$array_patterns2[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-danger" for="btncheck21">3</label>
     
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck22" value="4" autocomplete="off">
+                                        <input type="checkbox" name="first2[]" class="btn-check" id="btncheck22" value="4" autocomplete="off" {{in_array("4",$array_patterns2[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-primary" for="btncheck22">4</label>
     
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck23" value="5" autocomplete="off">
+                                        <input type="checkbox" name="first2[]" class="btn-check" id="btncheck23" value="5" autocomplete="off" {{in_array("5",$array_patterns2[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-warning" for="btncheck23">5</label>
     
-                                        <input type="checkbox" name="first[]" class="btn-check" id="btncheck24" value="6" autocomplete="off">
+                                        <input type="checkbox" name="first2[]" class="btn-check" id="btncheck24" value="6" autocomplete="off" {{in_array("6",$array_patterns2[0]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-success" for="btncheck24">6</label>
                                     </div>
                                 </div>
                                 <div class="pattern-item-input">
                                     <div class="rank">2着</div>
                                     <div class="btn-group pattern-btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck25" value="1" autocomplete="off">
+                                        <input type="checkbox" name="second2[]" class="btn-check" id="btncheck25" value="1" autocomplete="off" {{in_array("1",$array_patterns2[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-light" for="btncheck25">1</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck26" value="2" autocomplete="off">
+                                        <input type="checkbox" name="second2[]" class="btn-check" id="btncheck26" value="2" autocomplete="off" {{in_array("2",$array_patterns2[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-dark" for="btncheck26">2</label>
                                         
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck27" value="3" autocomplete="off">
+                                        <input type="checkbox" name="second2[]" class="btn-check" id="btncheck27" value="3" autocomplete="off" {{in_array("3",$array_patterns2[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-danger" for="btncheck27">3</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck28" value="4" autocomplete="off">
+                                        <input type="checkbox" name="second2[]" class="btn-check" id="btncheck28" value="4" autocomplete="off" {{in_array("4",$array_patterns2[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-primary" for="btncheck28">4</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck29" value="5" autocomplete="off">
+                                        <input type="checkbox" name="second2[]" class="btn-check" id="btncheck29" value="5" autocomplete="off" {{in_array("5",$array_patterns2[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-warning" for="btncheck29">5</label>
     
-                                        <input type="checkbox" name="second[]" class="btn-check" id="btncheck30" value="6" autocomplete="off">
+                                        <input type="checkbox" name="second2[]" class="btn-check" id="btncheck30" value="6" autocomplete="off" {{in_array("6",$array_patterns2[1]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-success" for="btncheck30">6</label>
                                     </div>            
                                 </div>
                                 <div class="pattern-item-input">
                                     <div class="rank">3着</div>
                                     <div class="btn-group pattern-btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck31" value="1" autocomplete="off">
+                                        <input type="checkbox" name="third2[]" class="btn-check" id="btncheck31" value="1" autocomplete="off" {{in_array("1",$array_patterns2[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-light" for="btncheck31">1</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck32" value="2" autocomplete="off">
+                                        <input type="checkbox" name="third2[]" class="btn-check" id="btncheck32" value="2" autocomplete="off" {{in_array("2",$array_patterns2[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-dark" for="btncheck32">2</label>
                                         
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck33" value="3" autocomplete="off">
+                                        <input type="checkbox" name="third2[]" class="btn-check" id="btncheck33" value="3" autocomplete="off" {{in_array("3",$array_patterns2[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-danger" for="btncheck33">3</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck34" value="4" autocomplete="off">
+                                        <input type="checkbox" name="third2[]" class="btn-check" id="btncheck34" value="4" autocomplete="off" {{in_array("4",$array_patterns2[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-primary" for="btncheck34">4</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck35" value="5" autocomplete="off">
+                                        <input type="checkbox" name="third2[]" class="btn-check" id="btncheck35" value="5" autocomplete="off" {{in_array("5",$array_patterns2[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-warning" for="btncheck35">5</label>
     
-                                        <input type="checkbox" name="third[]" class="btn-check" id="btncheck36" value="6" autocomplete="off">
+                                        <input type="checkbox" name="third2[]" class="btn-check" id="btncheck36" value="6" autocomplete="off" {{in_array("6",$array_patterns2[2]) ? 'checked' : ''}}>
                                         <label class="btn btn-outline-success" for="btncheck36">6</label>
                                     </div>
                                 </div>
