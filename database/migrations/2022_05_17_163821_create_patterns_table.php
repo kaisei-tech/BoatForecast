@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('patterns', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('forecast_id');
+            $table->foreignId('forecast_id')->constrained()->cascadeOnDelete();
             $table->enum('pattern_num', ['1', '2']);
             $table->enum('first', ['1', '2', '3', '4', '5', '6']);
             $table->enum('second', ['1', '2', '3', '4', '5', '6']);
