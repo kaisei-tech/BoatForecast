@@ -13,5 +13,6 @@ class Pattern extends Model
         return $this->belongsTo(Forecast::class);
     }
 
+    
 
 }

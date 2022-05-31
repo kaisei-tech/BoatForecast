@@ -6,7 +6,7 @@
     {{-- ヘッダー部分 --}}
     <div class="header">
         <div class="logo h1">
-            <span class="logo-text fw-bold">【Ｍｙ予想編集モード】</span>
+            <h1 class="logo-text fw-bold">【Ｍｙ予想編集モード】</h1>
         </div>
         <div class="header-btn">
             <button type=“button” class="btn btn-success  fw-bold " onclick="location.href='/index'">編集を完了する</button>                  
