@@ -60,7 +60,7 @@ class ForecastController extends Controller
         // $patterns->save();
 
 
-        return redirect("/browse_update");
+        return view("/browse_update",['forecasts' => $forecasts,'courses' => $courses]);
 
 
     }
@@ -86,6 +86,9 @@ class ForecastController extends Controller
         return view('browse');
     }
     
+    
+
+
     public function browse_update() {
         return view('browse_update');
     }
@@ -124,8 +127,13 @@ class ForecastController extends Controller
         $patterns->save();
 
 
-        return redirect("/browse");
+
+
+        return view("/browse",['forecasts' => $forecasts,'courses' => $courses]);
 
 }
+
+
+
 
 }

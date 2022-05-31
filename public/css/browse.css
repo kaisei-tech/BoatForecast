@@ -11312,6 +11312,10 @@ textarea.form-control-lg {
   margin: 80px 0px 0px 0px;
 }
 
+.left {
+  padding: 20px 20px;
+}
+
 .entry-title {
   margin-left: 10px;
 }
@@ -11345,8 +11349,28 @@ span {
 
 #race-name {
   width: 300px;
+  font-size: 25px;
 }
 
 #race-round {
   width: 40px;
+  font-size: 25px;
+}
+
+.forecast-pattern {
+  font-size: 25px;
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 12px;
+  margin-left: 5px;
+}
+
+.right {
+  margin-top: 25px;
+  padding-right: 20px;
+  padding-left: 40px;
+}
+
+#comment {
+  font-size: 25px;
+  margin-top: 20px;
 }

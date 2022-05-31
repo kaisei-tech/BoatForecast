@@ -20,36 +20,34 @@
                 <div class=" h2 border-bottom fw-bold entry-title">進入予想</div>
                 <div class="entry fw-bold">
                     <div class="entry-cource fw-bold h3">1コース</div> 
-                    <input id="entry-boat" type="text" placeholder="" />号艇                
+                    <input id="entry-boat" type="text"value="{{ $courses->course1 }}" placeholder="" />号艇                
                     <div class="entry-cource fw-bold h3">2コース</div> 
-                    <input id="entry-boat" type="text" placeholder="" />号艇
+                    <input id="entry-boat" type="text"value="{{ $courses->course2 }}" placeholder="" />号艇
                     <div class="entry-cource fw-bold h3">3コース</div> 
-                    <input id="entry-boat" type="text" placeholder="" />号艇
+                    <input id="entry-boat" type="text"value="{{ $courses->course3 }}" placeholder="" />号艇
                     <div class="entry-cource fw-bold h3">4コース</div> 
-                    <input id="entry-boat" type="text" placeholder="" />号艇
+                    <input id="entry-boat" type="text" value="{{ $courses->course4 }}"placeholder="" />号艇
                     <div class="entry-cource fw-bold h3">5コース</div> 
-                    <input id="entry-boat" type="text" placeholder="" />号艇
+                    <input id="entry-boat" type="text" value="{{ $courses->course5 }}"placeholder="" />号艇
                     <div class="entry-cource fw-bold h3">6コース</div> 
-                    <input id="entry-boat" type="text" placeholder="" />号艇
+                    <input id="entry-boat" type="text" value="{{ $courses->course6 }}"placeholder="" />号艇
                 </div>
                 <div class="race">
-                    <input id="race-name" type="text" placeholder="会場名" />
-                    <input id="race-round" type="text" placeholder="R" /><span fw-bold>R</span>
+                    <input id="race-name" type="text" value="{{ $forecasts->stadium }}" >
+                    <input id="race-round" type="text" value="{{ $forecasts->race }}"><span fw-bold>R</span>
                 </div>
-                <div class="forecast form-floating">
-                    <textarea class="form-control" style="height: 240px"></textarea>
-                    <label for="floatingTextarea">パターン１</label>                    
+                <div class=" form-floating">
+                    <textarea class="forecast-pattern" style="height: 240px" cols="43" rows="13"></textarea>                   
                 </div>
-                <div class="forecast form-floating">
-                    <textarea class="form-control" style="height: 240px"></textarea>
-                    <label for="floatingTextarea">パターン2</label>                    
+                <div class=" form-floating">
+                    <textarea class="forecast-pattern" style="height: 240px" cols="43" rows="13"></textarea>
                 </div>
         </div>
         {{-- メイン部分右側　コメント --}}
         <div class="right col-5">
             <div class="comment">
                 <div class="comment-logo h2  fw-bold">コメント</div>
-                <textarea name="introduction" id="introduction" cols="41" rows="28" class="form-control"></textarea>
+                <textarea name="comment" id="comment" cols="41" rows="16" class="form-control">{{ $forecasts->comment }}</textarea>
                 <p></p>
             </div>    
         </div>
