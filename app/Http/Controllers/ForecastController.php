@@ -95,9 +95,9 @@ class ForecastController extends Controller
         $second_list = $request->second;
         $third_list = $request->third;
         
-        foreach ($first_list as $first) {
-            foreach ($second_list as $second) {
-                foreach ($third_list as $third) {
+        foreach ((array)$first_list as $first) {
+            foreach ((array)$second_list as $second) {
+                foreach ((array)$third_list as $third) {
                     $patterns = new Pattern();
                     $patterns->forecast_id = $forecasts->id;
                     $patterns->pattern_num = $request->pattern_num[0];
@@ -115,9 +115,9 @@ class ForecastController extends Controller
         $second_list = $request->second2;
         $third_list = $request->third2;
         
-        foreach ($first_list as $first2) {
-            foreach ($second_list as $second2) {
-                foreach ($third_list as $third2) {
+        foreach ((array)$first_list as $first2) {
+            foreach ((array)$second_list as $second2) {
+                foreach ((array)$third_list as $third2) {
                     $patterns = new Pattern();
                     $patterns->forecast_id = $forecasts->id;
                     $patterns->pattern_num = $request->pattern_num[1];
@@ -209,10 +209,9 @@ class ForecastController extends Controller
         $first_list = $request->first;
         $second_list = $request->second;
         $third_list = $request->third;
-        
-        foreach ($first_list as $first) {
-            foreach ($second_list as $second) {
-                foreach ($third_list as $third) {
+        foreach ((array)$first_list as $first) {
+            foreach ((array)$second_list as $second) {
+                foreach ((array)$third_list as $third) {
                     $patterns = new Pattern();
                     $patterns->forecast_id = $forecasts->id;
                     $patterns->pattern_num = $request->pattern_num[0];
@@ -225,15 +224,16 @@ class ForecastController extends Controller
             }
             
         } 
-
-
+        
+        
         $first_list = $request->first2;
         $second_list = $request->second2;
         $third_list = $request->third2;
         
-        foreach ($first_list as $first2) {
-            foreach ($second_list as $second2) {
-                foreach ($third_list as $third2) {
+        //dd ($first_list,$second_list,$third_list);
+        foreach ((array)$first_list as $first2) {
+            foreach ((array)$second_list as $second2) {
+                foreach ((array)$third_list as $third2) {
                     $patterns = new Pattern();
                     $patterns->forecast_id = $forecasts->id;
                     $patterns->pattern_num = $request->pattern_num[1];
