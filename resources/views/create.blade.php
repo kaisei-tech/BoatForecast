@@ -19,9 +19,16 @@
             @csrf
             <div class="row">
                 <div class="left col-4">
+                    @if (count($errors) > 0)
+                    <ul  class="alert alert-danger  " style="list-style: none;">
+                        @foreach($errors->all() as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                    </ul>
+                    @endif
                     <div class="race">
-                        <input id="race-name" type="text" name="stadium" placeholder="会場名" />
-                        <input id="race-round" type="text" name="race" placeholder="R" /><span fw-bold>R</span>
+                        <input id="race-name" type="text" name="stadium"value="{{ old('stadium') }}" placeholder="会場名" />
+                        <input id="race-round" type="text" name="race" value="{{ old('race') }}"placeholder="R" /><span fw-bold>R</span>
                     </div>
                     <div class="pattern fw-bold">
                         <div class="pattern-item">
@@ -173,21 +180,21 @@
                     <div class=" h2 border-bottom fw-bold entry-title">進入予想</div>
                         <div class="entry fw-bold">
                             <div class="entry-cource fw-bold ">1コース</div> 
-                            <input id="entry-boat" type="text" name="course1" placeholder="" />号艇                
+                            <input id="entry-boat" type="text" name="course1"value="{{ old('course1') }}" placeholder="" />号艇                
                             <div class="entry-cource fw-bold ">2コース</div> 
-                            <input id="entry-boat" type="text" name="course2" placeholder="" />号艇
+                            <input id="entry-boat" type="text" name="course2"value="{{ old('course2') }}" placeholder="" />号艇
                             <div class="entry-cource fw-bold ">3コース</div> 
-                            <input id="entry-boat" type="text" name="course3" placeholder="" />号艇
+                            <input id="entry-boat" type="text" name="course3" value="{{ old('course3') }}"placeholder="" />号艇
                             <div class="entry-cource fw-bold ">4コース</div> 
-                            <input id="entry-boat" type="text" name="course4" placeholder="" />号艇
+                            <input id="entry-boat" type="text" name="course4"value="{{ old('course4') }}" placeholder="" />号艇
                             <div class="entry-cource fw-bold ">5コース</div> 
-                            <input id="entry-boat" type="text" name="course5" placeholder="" />号艇
+                            <input id="entry-boat" type="text" name="course5"value="{{ old('course5') }}" placeholder="" />号艇
                             <div class="entry-cource fw-bold ">6コース</div> 
-                            <input id="entry-boat" type="text" name="course6" placeholder="" />号艇
+                            <input id="entry-boat" type="text" name="course6" value="{{ old('course6') }}" placeholder="" />号艇
                         </div>
                     <div class="comment">
                         <div class="comment-logo h2  fw-bold">コメント</div>
-                        <textarea name="comment" id="forecastcomment" cols="67" rows="15"placeholder="予想コメントを書いてください" class="form-control"></textarea>
+                        <textarea name="comment" id="forecastcomment" cols="67" rows="15"placeholder="予想コメントを書いてください" class="form-control">{{ old('comment') }}</textarea>
                         <p class="help-block">※1100文字以内で書いてください<button type="submit" name="send" class="btn btn-success  fw-bold create-btn " onclick="location.href='/browse'">予想を作成する</button></p>
                     </div>    
                 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Rules\Hankaku;
 use App\Models\Forecast;
 use App\Models\Pattern;
 use App\Models\Course;
@@ -68,6 +69,26 @@ class ForecastController extends Controller
 
     //予想編集モードで更新された内容を保存ー＞my予想viewページにデータを渡す
     public function update(Request $request) {
+
+
+        $request->validate([
+
+            'stadium'     => 'required',
+            'race'        => new Hankaku,
+            'pattern_num' => 'required',
+            'first'       => 'required',
+            'second'      => 'required',
+            'third'       => 'required',
+            'course1'     => new Hankaku,
+            'course2'     => new Hankaku,
+            'course3'     => new Hankaku,
+            'course4'     => new Hankaku,
+            'course5'     => new Hankaku,
+            'course6'     => new Hankaku,
+            'comment'     => 'required'
+            
+            
+        ]);
 
         $forecast = Forecast::find($request->id);
         $forecast->race = $request->race;
@@ -186,6 +207,25 @@ class ForecastController extends Controller
 
     //my予想で入力した情報を保存ー＞my予想viewページにデータを渡す
     public function store(Request $request) {
+
+        $request->validate([
+
+            'stadium'     => 'required',
+            'race'        => new Hankaku,
+            'pattern_num' => 'required',
+            'first'       => 'required',
+            'second'      => 'required',
+            'third'       => 'required',
+            'course1'     => new Hankaku,
+            'course2'     => new Hankaku,
+            'course3'     => new Hankaku,
+            'course4'     => new Hankaku,
+            'course5'     => new Hankaku,
+            'course6'     => new Hankaku,
+            'comment'     => 'required'
+            
+            
+        ]);
         
         $forecast = new Forecast();
         $forecast->race = $request->race;

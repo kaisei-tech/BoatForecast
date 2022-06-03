@@ -20,6 +20,13 @@
                 <input type="hidden" name="id" value="{{ $forecasts->id }}">               
                 <div class="row">
                     <div class="left col-4">
+                        @if (count($errors) > 0)
+                        <ul  class="alert alert-danger  " style="list-style: none;">
+                        @foreach($errors->all() as $e)
+                            <li>{{ $e }}</li>
+                        @endforeach
+                        </ul>
+                    @endif
                         <div class="race">
                             <input id="race-name" type="text" name="stadium" value="{{ $forecasts->stadium }}" placeholder="会場名" />
                             <input id="race-round" type="text" name="race" value="{{ $forecasts->race }}"placeholder="R" /><span fw-bold>R</span>

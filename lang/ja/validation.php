@@ -133,4 +133,32 @@ return [
             'rule-name' => 'custom-message',
         ],
     ],
+    /*
+    |--------------------------------------------------------------------------
+    | Custom Validation Attributes
+    |--------------------------------------------------------------------------
+    |
+    | The following language lines are used to swap our attribute placeholder
+    | with something more reader friendly such as "E-Mail Address" instead
+    | of "email". This simply helps us make our message more expressive.
+    |
+    */
+
+    'attributes' => [
+        'stadium'=>'レース会場',
+        'race'=>'指定レース',
+        'pattern_num'=>'パターン１' ,
+        'first'=>'1着',
+        'second'=>'2着',
+        'third'=>'3着',
+        'course1'=>'１コース',
+        'course2'=>'２コース',
+        'course3'=>'３コース',
+        'course4'=>'４コース',
+        'course5'=>'５コース',
+        'course6'=>'６コース',
+        'comment'=>'コメント'
+    ],
+
+
 ];
