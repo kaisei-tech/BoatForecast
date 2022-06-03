@@ -23,9 +23,9 @@ class ForecastController extends Controller
     //予想一覧ページからidを受け取るー＞それぞれのモデルのidに紐づいた情報を取得し予想編集ページにデータを渡す
     public function edit($id)
 {
-    $forecasts = Forecast::find($id);
-    $courses = $forecasts->course;
-    $patterns = $forecasts->patterns;
+    $forecast = Forecast::find($id);
+    $course = $forecast->course;
+    $patterns = $forecast->patterns;
     $array_patterns1 = [[],[],[]];
     $array_patterns2 = [[],[],[]];
     foreach($patterns as $pattern) {
@@ -62,35 +62,35 @@ class ForecastController extends Controller
 
         //dd($array_patterns1);
     //dd(in_array("2",$array_patterns1[1]));
-    return view('edit', ['forecasts' => $forecasts,'courses' => $courses, 'array_patterns1'=> $array_patterns1,'array_patterns2'=> $array_patterns2]); 
+    return view('edit', ['forecasts' => $forecast,'courses' => $course, 'array_patterns1'=> $array_patterns1,'array_patterns2'=> $array_patterns2]); 
 }
 
 
     //予想編集モードで更新された内容を保存ー＞my予想viewページにデータを渡す
     public function update(Request $request) {
 
-        $forecasts = Forecast::find($request->id);
-        $forecasts->race = $request->race;
-        $forecasts->stadium = $request->stadium;
-        $forecasts->comment = $request->comment;
-        $forecasts->user_id =auth()->user()->id;
-        $forecasts->save();
+        $forecast = Forecast::find($request->id);
+        $forecast->race = $request->race;
+        $forecast->stadium = $request->stadium;
+        $forecast->comment = $request->comment;
+        $forecast->user_id =auth()->user()->id;
+        $forecast->save();
 
 
-        $courses = $forecasts->course;
-        $courses->forecast_id = $forecasts->id;
-        $courses->course1 = $request->course1;
-        $courses->course2 = $request->course2;
-        $courses->course3 = $request->course3;
-        $courses->course4 = $request->course4;
-        $courses->course5 = $request->course5;
-        $courses->course6 = $request->course6;
-        $courses->timestamps = false;
-        $courses->save();
+        $course = $forecast->course;
+        $course->forecast_id = $forecast->id;
+        $course->course1 = $request->course1;
+        $course->course2 = $request->course2;
+        $course->course3 = $request->course3;
+        $course->course4 = $request->course4;
+        $course->course5 = $request->course5;
+        $course->course6 = $request->course6;
+        $course->timestamps = false;
+        $course->save();
         
 
 
-        $forecasts->patterns()->delete();
+        $forecast->patterns()->delete();
         $first_list = $request->first;
         $second_list = $request->second;
         $third_list = $request->third;
@@ -98,14 +98,16 @@ class ForecastController extends Controller
         foreach ((array)$first_list as $first) {
             foreach ((array)$second_list as $second) {
                 foreach ((array)$third_list as $third) {
-                    $patterns = new Pattern();
-                    $patterns->forecast_id = $forecasts->id;
-                    $patterns->pattern_num = $request->pattern_num[0];
-                    $patterns->first = $first;
-                    $patterns->second = $second;
-                    $patterns->third = $third;
-                    $patterns->timestamps = false;
-                    $patterns->save();
+                    if(($first === $second) || ($first === $third) || ($second === $third)) continue;
+                    
+                    $pattern = new Pattern();
+                    $pattern->forecast_id = $forecast->id;
+                    $pattern->pattern_num = $request->pattern_num[0];
+                    $pattern->first = $first;
+                    $pattern->second = $second;
+                    $pattern->third = $third;
+                    $pattern->timestamps = false;
+                    $pattern->save();
                 }
             }
             
@@ -118,20 +120,22 @@ class ForecastController extends Controller
         foreach ((array)$first_list as $first2) {
             foreach ((array)$second_list as $second2) {
                 foreach ((array)$third_list as $third2) {
-                    $patterns = new Pattern();
-                    $patterns->forecast_id = $forecasts->id;
-                    $patterns->pattern_num = $request->pattern_num[1];
-                    $patterns->first = $first2;
-                    $patterns->second = $second2;
-                    $patterns->third = $third2;
-                    $patterns->timestamps = false;
-                    $patterns->save();
+                    if(($first2 === $second2) || ($first2 === $third2) || ($second2 === $third2)) continue;
+                    
+                    $pattern = new Pattern();
+                    $pattern->forecast_id = $forecast->id;
+                    $pattern->pattern_num = $request->pattern_num[1];
+                    $pattern->first = $first2;
+                    $pattern->second = $second2;
+                    $pattern->third = $third2;
+                    $pattern->timestamps = false;
+                    $pattern->save();
                 }
             }
             
         }
 
-        return redirect("/browse/" . $forecasts->id);
+        return redirect("/browse/" . $forecast->id);
 
 
     }
@@ -156,9 +160,9 @@ class ForecastController extends Controller
     
     public function browse($id) {
 
-        $forecasts = Forecast::find($id);
-        $courses = $forecasts->course;
-        $patterns = $forecasts->patterns;
+        $forecast = Forecast::find($id);
+        $course = $forecast->course;
+        $patterns = $forecast->patterns;
         
         $patternString = "";
         
@@ -171,7 +175,7 @@ class ForecastController extends Controller
         }
         
         
-        return view('browse', ['forecasts' => $forecasts,'courses' => $courses, 'pattern' => $patternString]); 
+        return view('browse', ['forecasts' => $forecast,'courses' => $course, 'pattern' => $patternString]); 
         
     }
     
@@ -183,24 +187,24 @@ class ForecastController extends Controller
     //my予想で入力した情報を保存ー＞my予想viewページにデータを渡す
     public function store(Request $request) {
         
-        $forecasts = new Forecast();
-        $forecasts->race = $request->race;
-        $forecasts->stadium = $request->stadium;
-        $forecasts->comment = $request->comment;
-        $forecasts->user_id =auth()->user()->id;
-        $forecasts->save();
+        $forecast = new Forecast();
+        $forecast->race = $request->race;
+        $forecast->stadium = $request->stadium;
+        $forecast->comment = $request->comment;
+        $forecast->user_id =auth()->user()->id;
+        $forecast->save();
 
 
-        $courses = new Course();
-        $courses->forecast_id = $forecasts->id;
-        $courses->course1 = $request->course1;
-        $courses->course2 = $request->course2;
-        $courses->course3 = $request->course3;
-        $courses->course4 = $request->course4;
-        $courses->course5 = $request->course5;
-        $courses->course6 = $request->course6;
-        $courses->timestamps = false;
-        $courses->save();
+        $course = new Course();
+        $course->forecast_id = $forecast->id;
+        $course->course1 = $request->course1;
+        $course->course2 = $request->course2;
+        $course->course3 = $request->course3;
+        $course->course4 = $request->course4;
+        $course->course5 = $request->course5;
+        $course->course6 = $request->course6;
+        $course->timestamps = false;
+        $course->save();
         
         
 
@@ -212,14 +216,17 @@ class ForecastController extends Controller
         foreach ((array)$first_list as $first) {
             foreach ((array)$second_list as $second) {
                 foreach ((array)$third_list as $third) {
-                    $patterns = new Pattern();
-                    $patterns->forecast_id = $forecasts->id;
-                    $patterns->pattern_num = $request->pattern_num[0];
-                    $patterns->first = $first;
-                    $patterns->second = $second;
-                    $patterns->third = $third;
-                    $patterns->timestamps = false;
-                    $patterns->save();
+                    if(($first === $second) || ($first === $third) || ($second === $third)) continue;
+                    
+                    $pattern = new Pattern();
+                    $pattern->forecast_id = $forecast->id;
+                    $pattern->pattern_num = $request->pattern_num[0];
+                    $pattern->first = $first;
+                    $pattern->second = $second;
+                    $pattern->third = $third;
+                    $pattern->timestamps = false;
+                    $pattern->save();
+                
                 }
             }
             
@@ -234,14 +241,16 @@ class ForecastController extends Controller
         foreach ((array)$first_list as $first2) {
             foreach ((array)$second_list as $second2) {
                 foreach ((array)$third_list as $third2) {
-                    $patterns = new Pattern();
-                    $patterns->forecast_id = $forecasts->id;
-                    $patterns->pattern_num = $request->pattern_num[1];
-                    $patterns->first = $first2;
-                    $patterns->second = $second2;
-                    $patterns->third = $third2;
-                    $patterns->timestamps = false;
-                    $patterns->save();
+                    if(($first2 === $second2) || ($first2 === $third2) || ($second2 === $third2)) continue;
+                    
+                    $pattern = new Pattern();
+                    $pattern->forecast_id = $forecast->id;
+                    $pattern->pattern_num = $request->pattern_num[1];
+                    $pattern->first = $first2;
+                    $pattern->second = $second2;
+                    $pattern->third = $third2;
+                    $pattern->timestamps = false;
+                    $pattern->save();
                 }
             }
             
@@ -251,7 +260,7 @@ class ForecastController extends Controller
 
 
 
-        return redirect("/browse/" . $forecasts->id);
+        return redirect("/browse/" . $forecast->id);
 
 }
 
