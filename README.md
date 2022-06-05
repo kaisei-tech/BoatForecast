@@ -7,7 +7,9 @@ BoatForecast is the application that can make a boat race forecast page of the o
  
 # DEMO
  
-"BoatForecast"の魅力が直感的に伝えわるデモ動画や図解を載せる
+![スクリーンショット (23)](https://user-images.githubusercontent.com/101911069/172052999-fdb60ca2-28a1-42e6-a121-cada29556eda.png)
+![スクリーンショット (24)](https://user-images.githubusercontent.com/101911069/172053286-227425da-039f-4832-8a1c-dd4a3257577d.png)
+
  
 # Features
  
