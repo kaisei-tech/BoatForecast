@@ -2,7 +2,7 @@
 
 @section('content')
 <body>
-<div style="background-image: url('img/boat.png');  background-size: cover;">    
+<div style="background-image: url('../img/boat.png');  background-size: cover;">    
     {{-- ヘッダー部分 --}}
     <div class="header">
         <div class="logo h1">
@@ -16,8 +16,8 @@
     <div class="main container">
     {{-- メイン部分左側 着順 会場 R 入力コンテンツ --}}
         <form method="POST" action="/browse">
+            @csrf
             <div class="row">
-                @csrf
                 <div class="left col-4">
                     <div class="race">
                         <input id="race-name" type="text" name="stadium" placeholder="会場名" />
@@ -187,7 +187,7 @@
                         </div>
                     <div class="comment">
                         <div class="comment-logo h2  fw-bold">コメント</div>
-                        <textarea name="comment" id="introduction" cols="67" rows="22"placeholder="予想コメントを書いてください" class="form-control"></textarea>
+                        <textarea name="comment" id="forecastcomment" cols="67" rows="15"placeholder="予想コメントを書いてください" class="form-control"></textarea>
                         <p class="help-block">※1100文字以内で書いてください<button type="submit" name="send" class="btn btn-success  fw-bold create-btn " onclick="location.href='/browse'">予想を作成する</button></p>
                     </div>    
                 </div>
