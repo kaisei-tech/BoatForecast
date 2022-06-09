@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('forecast_id');
+            $table->foreignId('forecast_id')->constrained()->cascadeOnDelete();
             $table->enum('course1', ['1', '2', '3', '4', '5', '6']);
             $table->enum('course2', ['1', '2', '3', '4', '5', '6']);
             $table->enum('course3', ['1', '2', '3', '4', '5', '6']);
