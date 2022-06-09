@@ -195,7 +195,7 @@
                     <div class="comment">
                         <div class="comment-logo h2  fw-bold">コメント</div>
                         <textarea name="comment" id="forecastcomment" cols="67" rows="15"placeholder="予想コメントを書いてください" class="form-control">{{ old('comment') }}</textarea>
-                        <p class="help-block">※1100文字以内で書いてください<button type="submit" name="send" class="btn btn-success  fw-bold create-btn " onclick="location.href='/browse'">予想を作成する</button></p>
+                        <p class="help-block">※600文字以内で書いてください<button type="submit" name="send" class="btn btn-success  fw-bold create-btn " onclick="location.href='/browse'">予想を作成する</button></p>
                     </div>    
                 </div>
             </div>
