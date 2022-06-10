@@ -18,7 +18,7 @@
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"
         style="background-image: url('../img/place.png'); background-size: cover;"
         >
-        <h1 class="text-white">Welcome t Boat Forecast</h1>
+        <h1 class="text-white">Welcome to Boat Forecast</h1>
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
